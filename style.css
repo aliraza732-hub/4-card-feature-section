@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+.color {
+    color: var(--Grayish-Blue);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 14px;
+}
+#heading-color {
+    color: var(--Very-Dark-Blue);
+    font-size: 30px;
+    padding-top: 13px;
+}
+#paragraph-color {
+    color: var(--Grayish-Blue);
+    padding-top: 20px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 50px;
+    font-size: 20px;
+    font-weight: 200;
+    width: 600px;
+    margin: auto;
+}
+.cards h3 {
+    padding-bottom: 7px;
+    font-size: 22px;
+}
+
+/* .card {
+    width: 300px;
+    height: 300px;
+    gap: 20px;
+    background-color: bisque;
+} */
+.card1, .card2, .card3, .card4 {
+    background-color: var(--Very-Light-Gray);
+    width: 300px;
+    height: 300px;
+    margin-bottom: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 5px solid;
+    border-radius: 10px;
+    box-shadow: rgb(117, 116, 116) 0px 1px 8px;
+    padding: 1.5rem;
+
+}
+.cards p {
+    line-height: 20px;
+    color: var(--Grayish-Blue);
+    font-size: medium;
+}
+.cards h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.card1 {
+    border-top-color: var(--Cyan);
+}
+.card2 {
+    border-top-color: var(--Red);
+}
+.card3 {
+    border-top-color: var(--Orange);
+}
+.card4 {
+    border-top-color: var(--Blue)
+}
+.icon {
+	position: relative;
+	top: 40%;
+	left: 70%;
+}
+/* use media query */
+@media (min-width:1024px) {
+    .cards {
+        width: 90%;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 50px;
+        margin: auto;
+    }
+    
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+    .cards {
+       
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+    }
+    .card1,.card2, .card3, .card4 {
+        width: 80%;
+    }
+    #paragraph-color {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .cards {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 30px;
+    }
+    .card1, .card2, .card3, .card4 {
+        width: auto;
+    }
+}
+
